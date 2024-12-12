@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/index.css */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .transition-theme {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Typing effect */
+.typing-effect {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.875rem; /* adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid transparent;
+  animation: typing 1.4s steps(22) 1s normal both infinite, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 45%;
+  }
+  100%{
+    width: fit-content;
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
